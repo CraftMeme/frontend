@@ -20,3 +20,7 @@ button {
 button:hover {
   transform: scale(1.05);
 }
+
+.shadow {
+  box-shadow: 2px 2px 3px #B624A9;
+}
