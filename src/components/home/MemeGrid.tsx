@@ -5,6 +5,7 @@ import { FC, useState } from "react";
 import { Button } from "../ui/button";
 import Image from "next/image";
 import Link from "next/link";
+import Card from "./Card";
 
 interface MemeGridProps {}
 
@@ -35,16 +36,20 @@ const MemeGrid: FC<MemeGridProps> = ({}) => {
         {/* Grid Container */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {getCurrentItems().map(({ id, tokenDescription, tokenFileUrl, tokenName, tokenSupply, tokenTicker }) => (
-            <Link key={id} href={`/${id}`} className="p-6 border border-red-300 w-full flex gap-2">
-              <Image src={tokenFileUrl} width={100} height={100} alt="token image" />
+            // <Link key={id} href={`/${id}`} className="p-6 border border-red-300 w-full flex gap-2">
+            //   <Image src={tokenFileUrl} width={100} height={100} alt="token image" />
 
-              <div className="flex flex-col gep-2">
-                <span>{tokenName}</span>
-                <span>{tokenTicker}</span>
-                <span>{tokenSupply}</span>
-                <p className="text-lg font-medium">{tokenDescription}</p>
-              </div>
-            </Link>
+            //   <div className="flex flex-col gep-2">
+            //     <span>{tokenName}</span>
+            //     <span>{tokenTicker}</span>
+            //     <span>{tokenSupply}</span>
+            //     <p className="text-lg font-medium">{tokenDescription}</p>
+            //   </div>
+            // </Link>
+
+            <div key={id}>
+              <Card />
+            </div>
           ))}
         </div>
 

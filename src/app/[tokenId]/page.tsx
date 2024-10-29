@@ -1,13 +1,14 @@
 "use client";
 
+import TokenDetails from "@/components/token/TokenDetails";
 import { useParams } from "next/navigation";
 
 export default function TokenDetailsPage() {
   const { tokenId } = useParams();
 
   return (
-    <div>
-      <h1>Token ID: {tokenId}</h1>
-    </div>
+    <main>
+      <TokenDetails id={tokenId as string} />
+    </main>
   );
 }

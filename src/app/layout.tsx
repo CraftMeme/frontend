@@ -7,6 +7,7 @@ import Web3ModalProvider from "@/context";
 import Navbar from "@/components/Navbar";
 import { Toaster } from "@/components/ui/sonner";
 import { cn } from "@/lib/utils";
+import { AOSInit } from "@/components/aos";
 
 const laila = Laila({ subsets: ["latin"], weight: ["300", "400", "500", "600", "700"] });
 
@@ -27,6 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <AOSInit />
       <body className={cn("bg-secondary", "text-white", laila.className, detacher.variable, "antialiased")}>
         <Web3ModalProvider>
           <Navbar />
