@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <AOSInit />
-      <body className={cn("bg-secondary", "text-white", laila.className, detacher.variable, "antialiased")}>
+      <body className={cn("bg-black", "text-white", laila.className, detacher.variable, "antialiased")}>
         <Web3ModalProvider>
           <Navbar />
           {children}

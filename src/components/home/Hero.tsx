@@ -1,6 +1,8 @@
+/* eslint-disable @typescript-eslint/no-empty-object-type */
 import { FC } from "react";
 import { Button } from "../ui/button";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 interface HeroProps {}
 
@@ -16,10 +18,11 @@ const Hero: FC<HeroProps> = ({}) => {
             <span className="text-[24px] leading-[43.2px] font-light tracking-[6%]">
               Create, provide liquidity, and trade with built-in rugpull protection
             </span>
-
-            <Button size="lg">
-              Create Your MemeCoin <ArrowRight className="ml-2" />
-            </Button>
+            <Link href={"/create"}>
+              <Button size="lg">
+                Create Your MemeCoin <ArrowRight className="ml-2" />
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

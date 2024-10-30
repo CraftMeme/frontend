@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-empty-object-type */
 import { FC } from "react";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";

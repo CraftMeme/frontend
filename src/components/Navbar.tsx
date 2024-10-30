@@ -20,10 +20,11 @@ const Navbar = () => {
   const handleConnect = () => {
     open();
   };
+  
   const stickNavbar = () => {
     if (window !== undefined) {
       let windowHeight = window.scrollY;
-      windowHeight > 50 ? setStickyClass(true) : setStickyClass(false);
+      windowHeight > 100 ? setStickyClass(true) : setStickyClass(false);
     }
   };
 
@@ -59,7 +60,7 @@ const Navbar = () => {
           </div>
 
           <Button className="uppercase hidden lg:block" onClick={handleConnect}>
-            {!isConnected ? "Buy Presale" : truncateAddress(address)}
+            {!isConnected ? "Buy Presale" : truncateAddress(address!)}
           </Button>
 
           <Button
@@ -92,7 +93,7 @@ const Navbar = () => {
             </div>
 
             <Button className="uppercase w-full" onClick={handleConnect}>
-              {!isConnected ? "Buy Presale" : truncateAddress(address)}
+              {!isConnected ? "Buy Presale" : truncateAddress(address!)}
             </Button>
           </div>
         ) : (

@@ -14,7 +14,7 @@ const TokenDetails: FC<TokenDetailsProps> = ({ id }) => {
       <div className="container mx-auto w-full relative">
         <div className="flex">
           <div className="basis-4/6 flex flex-col">
-            <div className="border border-primary h-[250px] w-full">chart</div>
+            <div className="border border-primary h-[250px] w-full">chart {id}</div>
             <TradingAnalytics />
           </div>
           <div className="basis-2/6">
