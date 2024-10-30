@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import VestingForm from "@/components/create/VestingForm";
 import Hero from "@/components/home/Hero";
 import MemeGrid from "@/components/home/MemeGrid";

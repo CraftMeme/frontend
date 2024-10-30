@@ -16,8 +16,9 @@ export const truncateAddress = (address: string) => {
 
 export const timeAgo = (dateString: string) => {
   const date = new Date(dateString);
+  if (isNaN(date.getTime())) return "";
   const now = new Date();
-  const secondsAgo = Math.floor((now - date) / 1000);
+  const secondsAgo = Math.floor((now.getTime() - date.getTime()) / 1000);
 
   if (secondsAgo < 60) return `${secondsAgo} sec ago`;
   const minutesAgo = Math.floor(secondsAgo / 60);

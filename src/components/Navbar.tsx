@@ -20,11 +20,14 @@ const Navbar = () => {
   const handleConnect = () => {
     open();
   };
-  
+
   const stickNavbar = () => {
     if (window !== undefined) {
-      let windowHeight = window.scrollY;
-      windowHeight > 100 ? setStickyClass(true) : setStickyClass(false);
+      if (window.scrollY > 100) {
+        setStickyClass(true);
+      } else {
+        setStickyClass(false);
+      }
     }
   };
 
