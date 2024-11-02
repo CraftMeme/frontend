@@ -117,6 +117,33 @@ Pinata is used for storing metadata and token images on IPFS. Ensure your Pinata
 4. **Governance**: Approve or reject proposals through multisig voting for secure governance
 5. **Set Vesting Schedule**: Schedule token distribution over a set period
 
+## Future Improvements
+
+To enhance the functionality of the memecoin launchpad, I would have implemented the following features with a focus on user engagement and real-time data insights. However, due to time constraints, I was unable to complete these implementations:
+
+1. **Real-Time Transaction Monitoring**
+
+   - **Feature**: I would utilize a streaming service to monitor transactions specifically related to newly created memecoins.
+   - **Implementation**: By modifying the main function, I would filter and process transactions that involve memecoins, extracting essential information such as transaction hashes, sender and receiver addresses, and amounts.
+   - **User Benefit**: This would allow users to receive real-time updates on transactions involving their memecoins, thereby enhancing transparency and engagement.
+
+2. **Price Tracking**
+
+   - **Feature**: I would implement a system to track the price movements of memecoins in real-time.
+   - **Implementation**: By leveraging the streaming data, I would monitor specific events (like trades) that impact the price of memecoins. Integrating with decentralized exchanges (DEXs) would enable fetching of price data and updating users on significant price changes.
+   - **User Benefit**: Users would receive alerts or notifications about notable price fluctuations, empowering them to make informed trading decisions.
+
+3. **Token Creation Notifications**
+
+   - **Feature**: I would set up a notification system to alert users when new memecoins are created.
+   - **Implementation**: By modifying the filter function, I would listen for events indicating new token creation and send notifications to users interested in the latest memecoins.
+   - **User Benefit**: This feature would keep users informed about new trading opportunities, allowing them to act quickly on emerging memecoins.
+
+4. **Transaction History and Analytics**
+   - **Feature**: I would develop a user-friendly dashboard that displays users' transaction history and analytics.
+   - **Implementation**: Utilizing the data captured from the stream, I would create an interface that showcases transaction details, including amounts, timestamps, and statuses.
+   - **User Benefit**: This would enable users to track their trading activities and analyze their performance over time, fostering a better understanding of their investment strategies.
+
 ## Contributing
 
 We welcome contributions! Please follow these steps:

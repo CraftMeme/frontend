@@ -1,6 +1,5 @@
 "use client";
 
-import { memes } from "@/constants";
 import { FC, useState, useEffect } from "react";
 import { Button } from "../ui/button";
 import Link from "next/link";
@@ -12,10 +11,10 @@ interface MemeGridProps {}
 
 const MemeGrid: FC<MemeGridProps> = ({}) => {
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 30;
-  const totalPages = Math.ceil(memes.length / itemsPerPage);
   const [tokens, setTokens] = useState<any[]>([]);
 
+  const itemsPerPage = 30;
+  const totalPages = Math.ceil(tokens.length / itemsPerPage);
   const getCurrentItems = () => {
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
