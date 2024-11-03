@@ -39,20 +39,6 @@ export default function TokenSigners() {
     }
   };
 
-  const handleDeploy = async () => {
-    if (!isConnected) {
-      toast.error("Wallet isn't connected, Please connect your wallet!");
-      return;
-    }
-
-    try {
-    } catch (error) {
-      toast.error("Failed to create token", {
-        description: error instanceof Error ? error.message : "Unknown error occurred",
-      });
-    }
-  };
-
   useEffect(() => {
     if (tokenFetched) {
       setTokenDetails(token as any);
