@@ -46,12 +46,12 @@ export default function TokenSigners() {
     }
 
     try {
-      
     } catch (error) {
       toast.error("Failed to create token", {
         description: error instanceof Error ? error.message : "Unknown error occurred",
-      });}
-  }
+      });
+    }
+  };
 
   useEffect(() => {
     if (tokenFetched) {
@@ -100,11 +100,6 @@ export default function TokenSigners() {
             ) : (
               <div>No signers available</div>
             )}
-
-            <Button onClick={handleDeploy} disabled={isConfirming} size="lg">
-              {isConfirming && <Loader2 className="w-4 h-4 mr-2 animate-spin" />}
-              Deploy your Contract
-            </Button>
           </CardContent>
         </Card>
       </div>
